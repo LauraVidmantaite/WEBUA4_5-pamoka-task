@@ -294,3 +294,34 @@ main {
     transform: translateX(49px);
   }
 }
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+  }
+
+  .container {
+    min-height: 50vh;
+  }
+
+  .animation--1:active ~ .bg--1 {
+    background-color: #d1ac00;
+  }
+  
+  .animation--1:active .sun-container {
+    animation-play-state: paused;
+  }
+  
+  .animation--1:active .sun-container .fa-sun {
+    color: #faf4d3;
+    transform: rotate(90deg) scale(1.5, 1.5);
+  }
+  
+  .animation--1:active .cloud--1 {
+    transform: translate(190px, 60px);
+  }
+  
+  .animation--1:active .cloud--2 {
+    transform: translate(0, 84px);
+  }
+}
